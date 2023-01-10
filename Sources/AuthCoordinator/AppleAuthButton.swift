@@ -9,7 +9,7 @@ import SwiftUI
 import Socialite
 import AuthenticationServices
 
-public struct AppleAuthButton<Viewer: AccessTokenable>: View {
+public struct AppleAuthButton<Viewer>: View where Viewer: AccessTokenable{
     
     public init(authCoordinator: AuthCoordinator<Viewer>?) {
         self.authCoordinator = authCoordinator

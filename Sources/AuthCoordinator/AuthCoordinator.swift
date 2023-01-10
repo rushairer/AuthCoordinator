@@ -3,7 +3,7 @@ import Socialite
 import ABKeychain
 import Combine
 
-public class AuthCoordinator<Viewer: AccessTokenable>: ObservableObject {
+public class AuthCoordinator<Viewer>: ObservableObject where Viewer: AccessTokenable {
     
     @Published public var authState: AuthState<Viewer> = .unauthorized
     
